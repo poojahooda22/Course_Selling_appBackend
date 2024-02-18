@@ -93,7 +93,7 @@ app.post('/users/login', userAuthentication, (req, res) => {
 });
 
 
-
+ // logic to get all courses for users
 app.get('/users/courses', userAuthentication, (req, res) => {
   // COURSES.filter(c => c.published)
   let filteredCourses = [];
