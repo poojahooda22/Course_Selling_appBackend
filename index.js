@@ -72,7 +72,7 @@ app.put('/admin/courses/:courseId', adminAuthentication, (req, res) => {
 });
 
 
- // logic to get all courses for
+ // logic to get all courses for admin
 app.get('/admin/courses', adminAuthentication, (req, res) => {
   res.json({ courses: COURSES}) 
 })
@@ -91,6 +91,8 @@ app.post('/users/signup', (req, res) => {
 app.post('/users/login', userAuthentication, (req, res) => {
   res.json({ message: 'Logged in successfully' });
 });
+
+
 
 app.get('/users/courses', userAuthentication, (req, res) => {
   // COURSES.filter(c => c.published)
