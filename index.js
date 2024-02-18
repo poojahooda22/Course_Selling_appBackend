@@ -48,7 +48,7 @@ app.post('/admin/login', adminAuthentication, (req, res) => {
   res.json({ message: "Admin logged in successfully" })
 });
 
-
+// logic to create a course
 app.post('/admin/courses',  adminAuthentication,  (req, res) => { 
   const course = req.body;
   course.id = Date.now();
