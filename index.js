@@ -37,7 +37,7 @@ app.post('/admin/signup', (req, res) => {
     let adminAlreadyExists = ADMINS.find((a) => a.username === admin.username);
     
     if(adminAlreadyExists) {
-        res.status(403).json({message: "User already exists"});
+      res.status(403).json({message: "User already exists"});
     } else {
       ADMINS.push(admin); 
       res.status(200).json({message: "Admin Signup Successfully"});
