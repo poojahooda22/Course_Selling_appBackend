@@ -18,6 +18,8 @@ const adminAuthentication = (req, res, next) => {
         res.status(403).json({ message: "Admin Authentication failed" });
     }
 }
+
+//this is middleware for user
 const userAuthentication = (req, res, next) => {
   const { username, password } = req.headers;
   const user = USERS.find(u => u.username === username && u.password === password);
