@@ -39,7 +39,7 @@ app.post('/admin/signup', (req, res) => {
     if(adminAlreadyExists) {
         res.status(403).json({message: "User already exists"});
     } else {
-        ADMINS.push(admin); 
+      ADMINS.push(admin); 
         res.status(200).json({message: "Admin Signup Successfully"});
     } 
 });
