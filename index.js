@@ -28,6 +28,7 @@ const userAuthentication = (req, res, next) => {
     res.status(403).json({ message: 'User authentication failed' });
   }
 };
+
 // Admin routes
 app.post('/admin/signup', (req, res) => {
     var admin = req.body;
