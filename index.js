@@ -30,7 +30,7 @@ const userAuthentication = (req, res, next) => {
 };
 // Admin routes
 app.post('/admin/signup', (req, res) => {
-  // logic to sign up admin
+  // logic to sign up adm
     var admin = req.body;
     let adminAlreadyExists = ADMINS.find((a) => a.username === admin.username);
     
