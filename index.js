@@ -54,7 +54,6 @@ app.post('/admin/courses',  adminAuthentication,  (req, res) => {
   course.id = Date.now();
   COURSES.push(course);
   res.json({message: "Course created successfully", courseId: course.id});
-
 });
 
 app.put('/admin/courses/:courseId', adminAuthentication, (req, res) => {
