@@ -47,7 +47,6 @@ app.post('/admin/signup', (req, res) => {
 app.post('/admin/login', adminAuthentication, (req, res) => {
   res.json({ message: "Admin logged in successfully" })
   
-   
 });
 
 app.post('/admin/courses',  adminAuthentication,  (req, res) => {
