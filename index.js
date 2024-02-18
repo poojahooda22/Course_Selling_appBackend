@@ -72,7 +72,7 @@ app.put('/admin/courses/:courseId', adminAuthentication, (req, res) => {
 });
 
 
- // logic to get all courses
+ // logic to get all courses for
 app.get('/admin/courses', adminAuthentication, (req, res) => {
   res.json({ courses: COURSES}) 
 })
