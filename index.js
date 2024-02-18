@@ -8,7 +8,7 @@ let USERS = [];
 let COURSES = [];
 
 
-//this is middleware
+//this is middleware for admin
 const adminAuthentication = (req, res, next) => {
     const {username, password} = req.headers;   
     const admin = ADMINS.find(a => a.username === username && a.password === password);
