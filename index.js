@@ -75,7 +75,6 @@ app.put('/admin/courses/:courseId', adminAuthentication, (req, res) => {
  // logic to get all courses
 app.get('/admin/courses', adminAuthentication, (req, res) => {
   res.json({ courses: COURSES}) 
-
 })
 
 app.post('/users/signup', (req, res) => {
@@ -132,4 +131,4 @@ app.get('/users/purchasedCourses', userAuthentication, (req, res) => {
 
 app.listen(3000, () => {
   console.log('Server is listening on port 3000');
-})  
+});
