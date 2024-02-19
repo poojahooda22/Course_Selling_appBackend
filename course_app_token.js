@@ -53,7 +53,7 @@ app.post('/admin/signup', (req, res) => {
     res.status(403).json({ message: 'Admin already exists' });
   } else {
     ADMINS.push(newAdmin);
-    // fs.writeFileSync('admins.json', JSON.stringify(ADMINS));
+    fs.writeFileSync('admins.json', JSON.stringify(ADMINS));
     const token = generateJwt(newAdmin)
     res.json({ message: 'Admin created successfully', token });
   }
