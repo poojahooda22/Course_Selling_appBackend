@@ -95,7 +95,7 @@ app.put('/admin/courses/:courseId', authenticateJwt, async (req, res) => {
     }
 });
 
-app.get('admin/courses', authenticateJwt, async(req, res) => {
+app.get('/admin/courses', authenticateJwt, async(req, res) => {
     const courses = await Course.find({});
 
     res.json({courses});
@@ -135,7 +135,7 @@ app.get('/users/courses', authenticateJwt, async (req, res) => {
 app.post('/users/courses/:courseId', authenticateJwt, async(req, res) => {
     const course = await Course.findById(req.params.courseId);
     if(course) {
-        const user = await User.findOne({username: rq.user.username});
+        const user = await User.findOne({username: req.user.username});
         if(user) {
             user.purchasedCourses.push(course);
             await user.save();
