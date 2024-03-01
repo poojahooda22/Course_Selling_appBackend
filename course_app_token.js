@@ -72,6 +72,12 @@ app.post('/admin/login', (req, res) => {
   }
 });
 
+app.get('/admin/me', authenticateJwt, (req, res) => {
+  res.json({
+    username: req.user.username
+  })
+})
+
 app.post('/admin/courses', authenticateJwt, (req, res) => {
   const course = req.body;
   course.id = COURSES.length + 1;
